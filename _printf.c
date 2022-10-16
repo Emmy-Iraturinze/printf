@@ -4,12 +4,11 @@
 #include "main.h"
 #include <stddef.h>
 /**
- *_printf - recreates the printf function
+ * _printf - recreates the printf function
  * @format: string with format specifier
  * Return: number of characters printed
  */
 int _printf(const char *format, ...)
-
 {
 if (format != NULL)
 	{
@@ -26,7 +25,8 @@ while (format != NULL && format[i] != '\0')
 if (format[i] == '%')
 {
 if (format[i + 1] == '%')
-{count += _putchar(format[i]);
+{
+count += _putchar(format[i]);
 i += 2;
 }
 else
@@ -50,3 +50,5 @@ return (count);
 }
 return (-1);
 }
+
+
